@@ -20,11 +20,9 @@
 html{height:100%;-webkit-text-size-adjust:100%;font-size:16px}
 body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
   background:#f2f2f7;color:#1c1c1e;min-height:100%;
-  /* iOS safe area */
   padding-top:env(safe-area-inset-top);
   padding-bottom:env(safe-area-inset-bottom)}
 
-/* ── VARIABLES ── */
 :root{
   --navy:#0d1b2a;
   --blue:#2563eb;
@@ -39,7 +37,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
   --btn-h:56px;
 }
 
-/* ── SCREENS ── */
 #scr-login,#scr-app{min-height:100vh}
 #scr-login{
   display:flex;align-items:center;justify-content:center;
@@ -47,7 +44,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 }
 #scr-app{display:none;flex-direction:column;background:var(--bg)}
 
-/* ── LOGIN CARD ── */
 .lcard{
   background:#fff;border-radius:22px;padding:36px 24px 28px;
   width:100%;max-width:360px;
@@ -85,7 +81,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
   text-align:center;margin-top:12px;min-height:18px;
 }
 
-/* ── TOPBAR ── */
 .topbar{
   background:var(--navy);
   padding:14px 16px max(14px,env(safe-area-inset-top));
@@ -110,10 +105,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 #btn-lock:active{background:rgba(255,255,255,.2)}
 #btn-lock svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;pointer-events:none}
 
-/* ── SCROLL ── */
 .scroll{padding:16px;max-width:480px;width:100%;margin:0 auto}
 
-/* ── SUCCESS CARD ── */
 #success-card{
   display:none;background:#f0fdf4;
   border:2px solid #86efac;border-radius:18px;
@@ -143,7 +136,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 #btn-edit-last:active{background:#eff6ff}
 #btn-edit-last svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;pointer-events:none}
 
-/* ── FORM CARD ── */
 .card{
   background:var(--card);border-radius:18px;
   padding:20px 16px;margin-bottom:16px;
@@ -176,8 +168,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 .row2{display:flex;gap:10px}
 .row2 input{flex:1}
 
-/* ── SEGMENT BUTTONS (operation / product) ── */
-/* Styled exactly like iOS segmented controls */
 .segment{
   display:flex;gap:0;background:#f2f2f7;
   border-radius:12px;padding:3px;margin-bottom:20px;
@@ -189,7 +179,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
   -webkit-appearance:none;transition:all .2s;
   display:flex;align-items:center;justify-content:center;gap:6px;
 }
-/* pointer-events none on all children — critical for iOS */
 .seg-btn *{pointer-events:none}
 .seg-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
 .seg-btn.active{
@@ -201,7 +190,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 .seg-btn.active-a{background:#dbeafe;color:#1e3a8a}
 .seg-btn.active-m{background:#f3f4f6;color:#374151;border:1.5px solid #d1d5db}
 
-/* ── CALC BOX ── */
 .calcbox{
   border-radius:14px;padding:16px;margin-bottom:20px;
   min-height:58px;display:flex;align-items:center;
@@ -214,7 +202,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 .calcbox.empty span{color:#8e8e93;font-weight:500;font-size:14px}
 .calcbox.bad   span{color:var(--red);font-weight:600;font-size:14px}
 
-/* ── SAVE BUTTON ── */
 #btn-save{
   display:flex;align-items:center;justify-content:center;gap:10px;
   width:100%;height:60px;
@@ -228,7 +215,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 #btn-save:active{opacity:.75}
 #btn-save svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.5;pointer-events:none}
 
-/* ── TOAST ── */
 #toast{
   position:fixed;bottom:calc(28px + env(safe-area-inset-bottom));
   left:50%;transform:translateX(-50%) translateY(20px);
@@ -242,7 +228,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 }
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-/* ── EDIT SHEET ── */
 #edit-overlay{
   display:none;position:fixed;inset:0;
   background:rgba(0,0,0,.6);z-index:500;
@@ -281,7 +266,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 .btn-save-edit{background:var(--navy);border-color:var(--navy);color:#fff}
 .btn-save-edit:active{opacity:.75}
 
-/* ── ACTIVE JOBS MOBILE ──────────────────────────────────────── */
 .mob-active-section{margin-bottom:16px}
 .mob-active-hdr{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .mob-active-title{font-size:12px;font-weight:800;text-transform:uppercase;
@@ -299,7 +283,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 .mob-aj-dot.paused{animation:none;background:#f59e0b;box-shadow:0 0 6px #f59e0b}
 .mob-aj-name{font-size:16px;font-weight:800;color:var(--navy);flex:1}
 .mob-aj-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-/* Timer display */
 .mob-aj-timer-wrap{background:#f9fafb;border-radius:12px;padding:14px 16px;
   margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
 .mob-aj-timer{font-size:32px;font-weight:800;font-variant-numeric:tabular-nums;
@@ -311,7 +294,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 .mob-aj-status-lbl.paused{color:#f59e0b}
 .mob-aj-pay-live{font-size:13px;font-weight:700;color:var(--navy);
   font-variant-numeric:tabular-nums;margin-top:4px}
-/* Timeline */
 .mob-aj-tl{margin-bottom:12px}
 .mob-aj-tl-row{display:flex;align-items:flex-start;gap:8px;padding:5px 0;
   border-bottom:1px solid #f3f4f6;font-size:12px}
@@ -322,7 +304,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 .mob-aj-tl-time{color:var(--gray);font-size:11px;font-family:-apple-system,sans-serif}
 .mob-aj-tl-dur{font-size:11px;font-weight:700;color:#f59e0b;
   background:#fffbeb;padding:2px 6px;border-radius:4px;display:inline-block;margin-top:2px}
-/* Control buttons */
 .mob-aj-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .mob-aj-controls.three{grid-template-columns:1fr 1fr 1fr}
 .mob-aj-ctrl{height:52px;border-radius:12px;font-size:13px;font-weight:700;
@@ -335,7 +316,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 .ctrl-resume{background:#f0fdf4;border-color:#bbf7d0;color:#15803d}
 .ctrl-edit  {background:#eff6ff;border-color:#bfdbfe;color:var(--blue)}
 .ctrl-close {background:var(--navy);border-color:var(--navy);color:#fff}
-/* Start job button */
 #btn-start-job{
   width:100%;height:56px;
   background:linear-gradient(135deg,#16a34a,#15803d);
@@ -350,7 +330,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
   text-transform:uppercase;letter-spacing:.1em;margin:4px 0 10px;
   display:flex;align-items:center;gap:8px}
 .or-divider::before,.or-divider::after{content:'';flex:1;height:1px;background:#e5e7eb}
-/* Close job sheet */
 #close-mob-overlay{display:none;position:fixed;inset:0;
   background:rgba(0,0,0,.6);z-index:500;align-items:flex-end;justify-content:center}
 #close-mob-overlay.open{display:flex}
@@ -380,7 +359,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 </head>
 <body>
 
-<!-- ══ LOGIN ══════════════════════════════════════════════════ -->
 <div id="scr-login">
   <div class="lcard">
     <div class="lcard-logo">
@@ -391,7 +369,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
     <label for="l-user">User</label>
     <select id="l-user">
       <option value="">Select…</option>
-      <option value="usr_michael">Michael Muale</option>
+      <option value="usr_admin">Michael Muale</option>
+      <option value="usr_super1">Supervisor 1</option>
+      <option value="usr_super2">Supervisor 2</option>
     </select>
     <label for="l-pw">Password</label>
     <input type="password" id="l-pw" placeholder="Password"
@@ -401,7 +381,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
   </div>
 </div>
 
-<!-- ══ APP ════════════════════════════════════════════════════ -->
 <div id="scr-app">
 
   <div class="topbar">
@@ -419,7 +398,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 
   <div class="scroll">
 
-    <!-- Saved confirmation -->
     <div id="success-card">
       <div class="sc-head">
         <div class="sc-check">
@@ -438,7 +416,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
       </button>
     </div>
 
-    <!-- Active Jobs -->
     <div class="mob-active-section" id="mob-active-section">
       <div class="mob-active-hdr">
         <div class="mob-active-title">Active Jobs</div>
@@ -447,7 +424,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
       <div id="mob-active-list"></div>
     </div>
 
-    <!-- Form -->
     <div class="card">
       <div class="card-title">New Job Entry</div>
 
@@ -511,10 +487,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
       </button>
     </div>
 
-  </div><!-- /scroll -->
-</div><!-- /scr-app -->
+  </div>
+</div>
 
-<!-- ══ EDIT SHEET ═════════════════════════════════════════════ -->
 <div id="edit-overlay">
   <div class="sheet">
     <div class="sheet-handle"></div>
@@ -568,7 +543,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 </div>
 
 
-<!-- ══ CLOSE JOB SHEET ═══════════════════════════════════════ -->
 <div id="close-mob-overlay">
   <div class="close-mob-sheet">
     <div class="cms-handle"></div>
@@ -598,7 +572,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
   </div>
 </div>
 
-<!-- ══ EDIT ACTIVE SHEET ══════════════════════════════════════ -->
 <div id="edit-active-overlay">
   <div class="sheet">
     <div class="sheet-handle"></div>
@@ -646,9 +619,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
 <div id="toast"></div>
 
 <script>
-// ═══════════════════════════════════════════════════════════════
-// FIREBASE CONFIG
-// ═══════════════════════════════════════════════════════════════
 var FB = {
   apiKey:"AIzaSyBA6_XO_rT0NI3mtXx-1-nt-Hv2ZmZG4-8",
   authDomain:"petroda-mozambique.firebaseapp.com",
@@ -659,12 +629,13 @@ var FB = {
 };
 var FB_COL = "petroda_jobs";
 
-// ═══════════════════════════════════════════════════════════════
-// CONSTANTS & STATE
-// ═══════════════════════════════════════════════════════════════
 var LS_JOBS="prp_jobs_v4", LS_CFG="prp_cfg_v4", LS_SESS="prp_session";
 var DEFAULT_RATES={"Product Receipt|AGO":800,"Product Receipt|PMS":800,"Pumping|AGO":800,"Pumping|PMS":800};
-var USERS=[{id:"usr_michael",name:"Michael Muale",pw:"Petroda2026",role:"admin"}];
+var USERS=[
+  {id:"usr_admin", name:"Michael Muale", email:"michaelopanda4+admin@gmail.com",  role:"admin"},
+  {id:"usr_super1",name:"Supervisor 1",  email:"michaelopanda4+super1@gmail.com", role:"supervisor"},
+  {id:"usr_super2",name:"Supervisor 2",  email:"michaelopanda4+super2@gmail.com", role:"supervisor"}
+];
 
 var cfg=(function(){try{var s=localStorage.getItem(LS_CFG);return s?JSON.parse(s):{rates:DEFAULT_RATES};}catch(e){return{rates:DEFAULT_RATES};}})();
 var jobs=(function(){try{var s=localStorage.getItem(LS_JOBS);return s?JSON.parse(s):[];}catch(e){return[];}})();
@@ -674,9 +645,6 @@ var me=null, selOp="Product Receipt", selProd="AGO";
 var eOp="Product Receipt", eProd="AGO", editId=null;
 var fbDb=null;
 
-// ═══════════════════════════════════════════════════════════════
-// HELPERS
-// ═══════════════════════════════════════════════════════════════
 function g(id){return document.getElementById(id);}
 function today(){return new Date().toISOString().split("T")[0];}
 function mzn(n){return"MZN "+Number(n).toLocaleString("pt-MZ",{minimumFractionDigits:2,maximumFractionDigits:2});}
@@ -697,9 +665,6 @@ function toast(msg){
   clearTimeout(el._t);el._t=setTimeout(function(){el.className="";},2800);
 }
 
-// ═══════════════════════════════════════════════════════════════
-// FIREBASE
-// ═══════════════════════════════════════════════════════════════
 function fbInit(){
   function load(src,cb){
     var s=document.createElement("script");
@@ -707,13 +672,12 @@ function fbInit(){
     s.onerror=function(){g("sync-pill").textContent="offline";};
     document.head.appendChild(s);
   }
-  load("https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js",function(){
+  function afterApp(){
     load("https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js",function(){
       try{
         if(!firebase.apps.length)firebase.initializeApp(FB);
         fbDb=firebase.firestore();
         setSynced(true);
-        // Pull active jobs from Firebase on connect
         fbDb.collection('petroda_active_jobs').doc('list').get().then(function(doc){
           if (doc.exists) {
             var remote = doc.data().jobs || [];
@@ -722,7 +686,6 @@ function fbInit(){
             remote.forEach(function(j){ if(!seen[j.id]){ activeJobs.push(j); seen[j.id]=true; } });
             saveActive(); renderMobActive();
           }
-          // Real-time listener for active jobs
           fbDb.collection('petroda_active_jobs').doc('list').onSnapshot(function(doc){
             if (!doc.exists) return;
             var remote = doc.data().jobs || [];
@@ -737,7 +700,6 @@ function fbInit(){
           });
         }).catch(function(){});
 
-        // Pull then listen
         fbDb.collection(FB_COL).get().then(function(snap){
           var seen={},changed=false;
           jobs.forEach(function(j){seen[j.id]=true;});
@@ -746,7 +708,6 @@ function fbInit(){
             if(!seen[data.id]){jobs.push(data);seen[data.id]=true;changed=true;}
           });
           if(changed)lsave();
-          // Live listener
           fbDb.collection(FB_COL).onSnapshot(function(snap){
             snap.docChanges().forEach(function(ch){
               var data=ch.doc.data();
@@ -762,7 +723,9 @@ function fbInit(){
         });
       }catch(e){setSynced(false);}
     });
-  });
+  }
+  if(window.firebase){afterApp();}
+  else{load("https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js",afterApp);}
 }
 function fbPush(job){
   if(!fbDb)return;
@@ -776,24 +739,29 @@ function setSynced(ok){
   el.className=ok?"live":"";
 }
 
-// ═══════════════════════════════════════════════════════════════
-// AUTH
-// ═══════════════════════════════════════════════════════════════
 function doSignIn(){
-  var uid=g("l-user").value,pw=g("l-pw").value,err=g("l-err");
+  var uid=g("l-user").value,pw=g("l-pw").value,err=g("l-err"),btn=g("btn-signin");
   var u=USERS.find(function(x){return x.id===uid;});
   if(!u){err.textContent="Select a user.";return;}
-  if(pw!==u.pw){err.textContent="Wrong password.";g("l-pw").value="";return;}
-  err.textContent="";me=u;
-  try{sessionStorage.setItem(LS_SESS,JSON.stringify({id:u.id}));}catch(e){}
-  showApp();
+  if(!pw){err.textContent="Enter your password.";return;}
+  if(typeof firebase==="undefined"||!firebase.auth){err.textContent="Still connecting… try again in a moment.";return;}
+  err.textContent="";btn.disabled=true;btn.style.opacity=".6";
+  firebase.auth().signInWithEmailAndPassword(u.email,pw)
+    .catch(function(e){
+      btn.disabled=false;btn.style.opacity="1";
+      g("l-pw").value="";
+      if(e.code==="auth/wrong-password"||e.code==="auth/invalid-credential"||e.code==="auth/invalid-login-credentials"){err.textContent="Wrong password.";}
+      else if(e.code==="auth/too-many-requests"){err.textContent="Too many attempts. Wait a bit and try again.";}
+      else{err.textContent="Sign in failed. Check your internet connection.";}
+    });
 }
 function doLock(){
+  if(typeof firebase!=="undefined"&&firebase.auth){firebase.auth().signOut();}
   me=null;
-  try{sessionStorage.removeItem(LS_SESS);}catch(e){}
   g("scr-app").style.display="none";
   g("scr-login").style.display="flex";
   g("l-pw").value="";g("l-err").textContent="";
+  var btn=g("btn-signin");if(btn){btn.disabled=false;btn.style.opacity="1";}
 }
 function showApp(){
   g("scr-login").style.display="none";
@@ -805,9 +773,33 @@ function showApp(){
   fbInit();
 }
 
-// ═══════════════════════════════════════════════════════════════
-// SEGMENT CONTROLS
-// ═══════════════════════════════════════════════════════════════
+function initAuth(){
+  function load(src,cb){
+    var s=document.createElement("script");
+    s.src=src;s.onload=cb;
+    s.onerror=function(){g("l-err").textContent="Can't connect. Check your internet.";};
+    document.head.appendChild(s);
+  }
+  load("https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js",function(){
+    load("https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js",function(){
+      if(!firebase.apps.length)firebase.initializeApp(FB);
+      firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION).catch(function(){});
+      firebase.auth().onAuthStateChanged(function(user){
+        var btn=g("btn-signin");if(btn){btn.disabled=false;btn.style.opacity="1";}
+        if(user){
+          var u=USERS.find(function(x){return x.email===user.email;});
+          if(u){ me=u; showApp(); }
+          else{ firebase.auth().signOut(); }
+        }else{
+          me=null;
+          g("scr-app").style.display="none";
+          g("scr-login").style.display="flex";
+        }
+      });
+    });
+  });
+}
+
 function setOp(v){
   selOp=v;
   g("op-r").className="seg-btn"+(v==="Product Receipt"?" active active-r":"");
@@ -833,9 +825,6 @@ function setEPr(v){
   eCalc();
 }
 
-// ═══════════════════════════════════════════════════════════════
-// CALCULATORS
-// ═══════════════════════════════════════════════════════════════
 function recalc(){
   var sd=g("f-sd").value,st=g("f-st").value,ed=g("f-ed").value,et=g("f-et").value;
   var box=g("calcbox"),txt=g("calc-txt");
@@ -856,9 +845,6 @@ function eCalc(){
   el.innerHTML="<strong>"+r.h+"h "+r.mn+"m</strong> = <strong>"+ds+" days</strong>"+(r.rate?" → <strong style='color:#16a34a'>"+mzn(r.pay)+"</strong>":"");
 }
 
-// ═══════════════════════════════════════════════════════════════
-// SAVE
-// ═══════════════════════════════════════════════════════════════
 function doSave(){
   var name=g("f-name").value.trim();
   var sd=g("f-sd").value,st=g("f-st").value,ed=g("f-ed").value,et=g("f-et").value;
@@ -895,9 +881,6 @@ function showSuccess(j){
   setTimeout(function(){g("success-card").scrollIntoView({behavior:"smooth",block:"start"});},50);
 }
 
-// ═══════════════════════════════════════════════════════════════
-// EDIT
-// ═══════════════════════════════════════════════════════════════
 function openEdit(id){
   var j=jobs.find(function(x){return x.id===id;});if(!j)return;
   editId=id;eOp=j.op;eProd=j.prod;
@@ -924,9 +907,6 @@ function doEditSave(){
   toast("✓ Updated"+(fbDb?" & synced":""));
 }
 
-// ═══════════════════════════════════════════════════════════════
-// RESET
-// ═══════════════════════════════════════════════════════════════
 function resetForm(){
   var t=today();
   g("f-name").value="";
@@ -936,9 +916,6 @@ function resetForm(){
   g("success-card").style.display="none";
 }
 
-// ═══════════════════════════════════════════════════════════════
-// EVENTS — single document listener (most reliable on all iOS)
-// ═══════════════════════════════════════════════════════════════
 document.addEventListener("click",function(e){
   var t=e.target;
   while(t&&t!==document){
@@ -961,7 +938,6 @@ document.addEventListener("click",function(e){
       case "e-cancel": closeEdit(); return;
       case "e-ok":     doEditSave(); return;
       case "edit-overlay": if(e.target===g("edit-overlay"))closeEdit(); return;
-      // Active job sheet buttons
       case "ea-op-r": eaOp="Product Receipt"; g("ea-op-r").className="seg-btn active active-r"; g("ea-op-p").className="seg-btn"; return;
       case "ea-op-p": eaOp="Pumping"; g("ea-op-p").className="seg-btn active active-p"; g("ea-op-r").className="seg-btn"; return;
       case "ea-pr-a": eaProd="AGO"; g("ea-pr-a").className="seg-btn active active-a"; g("ea-pr-p").className="seg-btn"; return;
@@ -975,7 +951,6 @@ document.addEventListener("click",function(e){
       case "cms-sb-pay": mobStandbyMode="pay"; g("cms-sb-pay").className="cms-sb-opt sel"; g("cms-sb-doc").className="cms-sb-opt unsel"; return;
       case "close-mob-overlay": if(e.target===g("close-mob-overlay"))closeCmsSheet(); return;
     }
-    // Dynamic active job buttons — check current element AND closest parent
     var chk = t.closest ? t.closest('[data-mob-pause],[data-mob-resume],[data-mob-edit],[data-mob-close]') : null;
     var mobPauseId  = (chk||t).getAttribute("data-mob-pause");
     var mobResumeId = (chk||t).getAttribute("data-mob-resume");
@@ -1000,17 +975,11 @@ document.addEventListener("keydown",function(e){
   if(e.key==="Enter"&&e.target.id==="l-pw")doSignIn();
 },false);
 
-// ═══════════════════════════════════════════════════════════════
-// REGISTER SERVICE WORKER
-// ═══════════════════════════════════════════════════════════════
 if("serviceWorker" in navigator){
   navigator.serviceWorker.register("sw.js").catch(function(){});
 }
 
 
-// ════════════════════════════════════════════════════════════════
-// ACTIVE JOBS — MOBILE
-// ════════════════════════════════════════════════════════════════
 var LS_ACTIVE = 'prp_active_jobs_v1';
 var activeJobs = [];
 try { activeJobs = JSON.parse(localStorage.getItem(LS_ACTIVE)||'[]'); } catch(e){}
@@ -1030,7 +999,6 @@ function saveActive() {
   }
 }
 
-// ── START JOB ─────────────────────────────────────────────────
 function doStartJob() {
   var name = g('f-name').value.trim();
   var sd   = g('f-sd').value;
@@ -1062,7 +1030,6 @@ function doStartJob() {
   toast('▶ Job started — '+name);
 }
 
-// ── PAUSE / RESUME ────────────────────────────────────────────
 window.mobPause = function mobPause(id) {
   var j = activeJobs.find(function(x){return x.id===id;});
   if (!j||j.status!=='running') return;
@@ -1093,7 +1060,6 @@ window.mobResume = function mobResume(id) {
   saveActive(); renderMobActive(); toast('▶ Resumed');
 }
 
-// ── EDIT ACTIVE ───────────────────────────────────────────────
 window.mobEditActive = function mobEditActive(id) {
   var j = activeJobs.find(function(x){return x.id===id;});
   if (!j) return;
@@ -1104,7 +1070,6 @@ window.mobEditActive = function mobEditActive(id) {
   g('ea-sd').value   = j.startDate;
   g('ea-st').value   = j.startTime;
   g('ea-note').value = j.note||'';
-  // Set segment buttons
   g('ea-op-r').className='seg-btn'+(eaOp==='Product Receipt'?' active active-r':'');
   g('ea-op-p').className='seg-btn'+(eaOp==='Pumping'?' active active-p':'');
   g('ea-pr-a').className='seg-btn'+(eaProd==='AGO'?' active active-a':'');
@@ -1128,7 +1093,6 @@ window.confirmEditActive = function confirmEditActive() {
   toast('✓ Updated');
 }
 
-// ── CLOSE JOB ─────────────────────────────────────────────────
 window.mobCloseJob = function mobCloseJob(id) {
   var j = activeJobs.find(function(x){return x.id===id;});
   if (!j) return;
@@ -1137,214 +1101,11 @@ window.mobCloseJob = function mobCloseJob(id) {
   var now = new Date();
   g('cm-ed').value = now.toISOString().split('T')[0];
   g('cm-et').value = String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
-  // Summary
   var pausedMs   = j.pausedMs+(j.pauseStart?Date.now()-j.pauseStart:0);
   var pausedMins = Math.round(pausedMs/60000);
   var ph=Math.floor(pausedMins/60), pm=pausedMins%60;
   var hasPauses  = pausedMins > 0;
-  // Build pause log
   var pauseLog = '';
   j.timeline.forEach(function(t, idx2) {
     if (t.type==='pause') {
-      var resumeEv = j.timeline.slice(idx2+1).find(function(x){return x.type==='resume';});
-      var durStr = resumeEv
-        ? fmt(resumeEv.date)+' '+resumeEv.time+' ('+Math.floor((resumeEv.ts-t.ts)/60000/60)+'h '+Math.round((resumeEv.ts-t.ts)/60000%60)+'m)'
-        : 'still paused';
-      pauseLog += '<br>⏸ '+fmt(t.date)+' '+t.time+' → resumed '+durStr;
-    }
-  });
-  g('cms-summary').innerHTML =
-    '<strong>'+j.name+'</strong> · '+j.op+' · '+j.prod
-    +'<br>Started: '+fmt(j.startDate)+' '+j.startTime
-    +(hasPauses ? '<br>Total standby: '+ph+'h '+pm+'m'+pauseLog : '');
-  g('cms-standby-wrap').style.display = hasPauses ? 'block' : 'none';
-  g('close-mob-overlay').className = 'open';
-  mobCmsCalc();
-}
-function mobCmsCalc() {
-  var j  = activeJobs.find(function(x){return x.id===closingMobId;});
-  if (!j) return;
-  var ed = g('cm-ed').value, et = g('cm-et').value;
-  var el = g('cms-calc');
-  if (!ed||!et) { el.textContent='Set end time to calculate…'; return; }
-  var totalMs  = new Date(ed+'T'+et).getTime() - new Date(j.startDate+'T'+j.startTime).getTime();
-  var pausedMs = j.pausedMs+(j.pauseStart?Date.now()-j.pauseStart:0);
-  var workMins = Math.max(0,(totalMs-pausedMs)/60000);
-  var h=Math.floor(workMins/60), m=Math.round(workMins%60);
-  var days=workMins/1440;
-  var rate=(cfg.rates&&cfg.rates[j.op+'|'+j.prod])||800;
-  var pay=days*rate;
-  var opList=j.name.split(/[&,]+/).filter(Boolean);
-  var total=pay*(opList.length>1?opList.length:1);
-  var dStr=days.toLocaleString('en',{minimumFractionDigits:2,maximumFractionDigits:4});
-  el.innerHTML='<strong>'+h+'h '+m+'m</strong> = <strong>'+dStr+' days</strong>'
-    +' → <strong style="color:var(--green)">'+mzn(total)+'</strong>';
-}
-window.closeCmsSheet = function closeCmsSheet() {
-  g('close-mob-overlay').className = '';
-  closingMobId = null;
-}
-window.confirmMobClose = function confirmMobClose() {
-  var j  = activeJobs.find(function(x){return x.id===closingMobId;});
-  if (!j) return;
-  var ed = g('cm-ed').value, et = g('cm-et').value;
-  if (!ed||!et) { toast('⚠ Set end date and time'); return; }
-  var totalMs  = new Date(ed+'T'+et).getTime() - new Date(j.startDate+'T'+j.startTime).getTime();
-  var pausedMs = j.pausedMs+(j.pauseStart?Date.now()-j.pauseStart:0);
-  var workMins = Math.max(0,(totalMs-pausedMs)/60000);
-  var days     = workMins/1440;
-  var rate     = (cfg.rates&&cfg.rates[j.op+'|'+j.prod])||800;
-  var pay      = days*rate;
-  var opList   = j.name.split(/[&,]+/).map(function(s){return s.trim();}).filter(Boolean);
-  var isTeam   = opList.length>1;
-  var totalPay = pay*(isTeam?opList.length:1);
-  var newJob   = {
-    id:           Date.now(),
-    name:         j.name,
-    operatorList: opList,
-    teamSize:     opList.length,
-    op:           j.op,
-    prod:         j.prod,
-    start:        j.startDate,
-    startTime:    j.startTime,
-    end:          ed,
-    endTime:      et,
-    days:         days,
-    totalMinutes: workMins,
-    rate:         rate,
-    pay:          isTeam?totalPay:pay,
-    payEach:      pay,
-    otHrs:        0,
-    note:         j.note||'',
-    fromActive:   true
-  };
-  jobs.push(newJob);
-  lsave();
-  fbPush(newJob);
-  activeJobs = activeJobs.filter(function(x){return x.id!==closingMobId;});
-  saveActive();
-  closeCmsSheet();
-  renderMobActive();
-  showSuccess(newJob);
-  toast('✓ Job closed — '+mzn(isTeam?totalPay:pay));
-}
-
-// ── RENDER ACTIVE JOBS ────────────────────────────────────────
-function fmtD(d){
-  if(!d) return '—';
-  var p=d.split('-'); return p[2]+'/'+p[1]+'/'+p[0];
-}
-function renderMobActive() {
-  var list  = g('mob-active-list');
-  var badge = g('mob-active-count');
-  var sec   = g('mob-active-section');
-  if (!list) return;
-  if (badge) badge.textContent = activeJobs.length;
-
-  if (!activeJobs.length) {
-    list.innerHTML = '';
-    if (sec) sec.style.display = 'none';
-    if (mobTimerInterval) { clearInterval(mobTimerInterval); mobTimerInterval=null; }
-    return;
-  }
-  if (sec) sec.style.display = 'block';
-
-  list.innerHTML = activeJobs.map(function(j) {
-    var isPaused = j.status==='paused';
-    var pausedMs = j.pausedMs+(j.pauseStart?Date.now()-j.pauseStart:0);
-    var elapsed  = Date.now()-new Date(j.startDate+'T'+j.startTime).getTime()-pausedMs;
-    var workMins = Math.max(0,elapsed/60000);
-    var wh=Math.floor(workMins/60), wm=Math.round(workMins%60);
-    var timerStr = wh+'h '+String(wm).padStart(2,'0')+'m';
-    var rate=(cfg.rates&&cfg.rates[j.op+'|'+j.prod])||800;
-    var pay=(workMins/1440)*rate;
-    var opList=j.name.split(/[&,]+/).filter(Boolean);
-    var dispPay=opList.length>1?pay*opList.length:pay;
-    // Badges
-    var opBdg = j.op==='Product Receipt'
-      ? '<span style="font-size:10px;background:#e0e7ff;color:#3730a3;padding:2px 7px;border-radius:4px;font-weight:700">Receipt</span>'
-      : '<span style="font-size:10px;background:#dcfce7;color:#166534;padding:2px 7px;border-radius:4px;font-weight:700">Pumping</span>';
-    var prBdg = j.prod==='AGO'
-      ? '<span style="font-size:10px;background:#dbeafe;color:#1e3a8a;padding:2px 7px;border-radius:4px;font-weight:700">AGO</span>'
-      : '<span style="font-size:10px;background:#f3f4f6;color:#374151;padding:2px 7px;border-radius:4px;font-weight:700">PMS</span>';
-    // Timeline
-    var tlHtml = '';
-    j.timeline.forEach(function(t, idx2) {
-      var icon  = t.type==='start'?'▶':t.type==='pause'?'⏸':'▶';
-      var label = t.type==='start'?'Started':t.type==='pause'?'Paused — standby begins':'Resumed — standby ended';
-      var color = t.type==='pause'?'#92400e':'#15803d';
-      var durHtml='';
-      if (t.type==='pause') {
-        var resumeEv=j.timeline.slice(idx2+1).find(function(x){return x.type==='resume';});
-        if (resumeEv) {
-          var dm=Math.round((resumeEv.ts-t.ts)/60000);
-          var dh=Math.floor(dm/60),dmm=dm%60;
-          durHtml='<div class="mob-aj-tl-dur">'+dh+'h '+dmm+'m standby — resumed '+fmtD(resumeEv.date)+' '+resumeEv.time+'</div>';
-        } else if (isPaused) {
-          var liveMins=Math.round((Date.now()-(j.pauseStart||t.ts))/60000);
-          var lh=Math.floor(liveMins/60),lm=liveMins%60;
-          durHtml='<div class="mob-aj-tl-dur">'+lh+'h '+lm+'m ongoing</div>';
-        }
-      }
-      tlHtml+='<div class="mob-aj-tl-row">'
-        +'<div class="mob-aj-tl-icon">'+icon+'</div>'
-        +'<div class="mob-aj-tl-body">'
-        +'<div class="mob-aj-tl-label" style="color:'+color+'">'+label+'</div>'
-        +'<div class="mob-aj-tl-time">'+fmtD(t.date)+' · '+t.time+'</div>'
-        +durHtml
-        +'</div></div>';
-    });
-    // Control buttons
-    var pauseCtrl = isPaused
-      ? '<button class="mob-aj-ctrl ctrl-resume" onclick="window.mobResume('+j.id+')"><svg viewBox="0 0 24 24" style="pointer-events:none"><polygon points="5 3 19 12 5 21 5 3"/></svg>Resume</button>'
-      : '<button class="mob-aj-ctrl ctrl-pause" onclick="window.mobPause('+j.id+')"><svg viewBox="0 0 24 24" style="pointer-events:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>Pause</button>';
-
-    return (function() {
-    var jid = j.id;
-    var started = fmtD(j.startDate)+' at '+j.startTime;
-    var elapsedMins = Math.floor((Date.now() - new Date(j.startDate+'T'+j.startTime).getTime()) / 60000);
-    var elH = Math.floor(elapsedMins/60), elM = elapsedMins%60;
-    var agoStr = elH > 0 ? elH+'h '+elM+'m ago' : elM+'m ago';
-    var opBdg2 = j.op==='Product Receipt'
-      ? '<span style="font-size:10px;background:#e0e7ff;color:#3730a3;padding:2px 7px;border-radius:4px;font-weight:700">Receipt</span>'
-      : '<span style="font-size:10px;background:#dcfce7;color:#166534;padding:2px 7px;border-radius:4px;font-weight:700">Pumping</span>';
-    var prBdg2 = j.prod==='AGO'
-      ? '<span style="font-size:10px;background:#dbeafe;color:#1e3a8a;padding:2px 7px;border-radius:4px;font-weight:700">AGO</span>'
-      : '<span style="font-size:10px;background:#f3f4f6;color:#374151;padding:2px 7px;border-radius:4px;font-weight:700">PMS</span>';
-    return '<div class="mob-aj-card" id="ajcard-'+jid+'">'
-      +'<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">'
-      +'<div class="mob-aj-dot"></div>'
-      +'<div style="font-size:16px;font-weight:800;color:#0d1b2a">'+j.name+'</div>'
-      +'</div>'
-      +'<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">'+opBdg2+prBdg2+'</div>'
-      +'<div style="font-size:13px;color:#6b7280;margin-bottom:4px">Started: <strong>'+started+'</strong></div>'
-      +'<div style="font-size:12px;color:#16a34a;font-weight:700;margin-bottom:10px">'+agoStr+' running</div>'
-      +(j.note?'<div style="font-size:11px;color:#8e8e93;margin-bottom:8px">'+j.note+'</div>':'')
-      +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">'
-      +'<button style="height:50px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;background:#eff6ff;border:2px solid #bfdbfe;color:#2563eb;display:flex;align-items:center;justify-content:center;gap:6px;-webkit-appearance:none" onclick="window.mobEditActive('+jid+')">'
-      +'<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;pointer-events:none"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Edit</button>'
-      +'<button style="height:50px;border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;background:#0d1b2a;border:2px solid #0d1b2a;color:#fff;display:flex;align-items:center;justify-content:center;gap:6px;-webkit-appearance:none" onclick="window.mobCloseJob('+jid+')">'
-      +'<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.5;pointer-events:none"><polyline points="20 6 9 17 4 12"/></svg>Close Job</button>'
-      +'</div>'
-      +'</div>';
-  })();
-}).join('');
-
-  // No live timer on mobile — desktop handles that
-}
-
-// ═══════════════════════════════════════════════════════════════
-// BOOT — runs immediately
-// ═══════════════════════════════════════════════════════════════
-(function(){
-  var restored=false;
-  try{
-    var s=sessionStorage.getItem(LS_SESS);
-    if(s){var sess=JSON.parse(s);var u=USERS.find(function(x){return x.id===sess.id;});if(u){me=u;restored=true;}}
-  }catch(e){}
-  if(restored){g("scr-login").style.display="none";showApp();}
-  else{g("scr-login").style.display="flex";}
-})();
-</script>
-</body>
-</html>
+      var
